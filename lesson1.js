@@ -20,7 +20,6 @@ let b = 4
 // console.log(5==='5')
 // a +=b;
 // console.log(a);
-// console.log(("5" === 5));
 // console.log(a%2 == 0 && a < 6 && a>0);
 // console.log(a%2 == 0 || a > 6 | | a>0);
 // console.log(a%2 == 0 && (a < 6 | | a>0));
