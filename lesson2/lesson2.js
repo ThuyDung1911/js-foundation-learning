@@ -87,14 +87,29 @@
 
 // console.log( student);
 
-const obj = {a:3, b:5};
-console.log(obj);
-obj.a = 2;
-delete obj.b;
-console.log(obj);
+// const obj = {a:3, b:5};
+// console.log(obj);
+// obj.a = 2;
+// delete obj.b;
+// console.log(obj);
 
-console.log(JSON.stringify(obj));
+// console.log(JSON.stringify(obj));
 
-a = JSON.parse('{"a":3, "b":5}');
-console.log(a);
+// a = JSON.parse('{"a":3, "b":5}');
+// console.log(a);
 
+// var s = 'Hello';
+// console.log(s[1]);
+
+a = "abc"
+console.log(a)
+a="xyz"
+console.log(a)
+
+var chars = ['z', 'c' ,'a', 'l'];
+console.log(chars.sort());
+
+console.log(typeof 's');
+console.log(typeof []);
+
+console.log(typeof null);
