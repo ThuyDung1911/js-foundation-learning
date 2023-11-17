@@ -1,0 +1,14 @@
+function countVowels(str) {
+  // Sử dụng biểu thức chính quy để tìm các nguyên âm
+  const matches = str.match(/[aeiouAEIOU]/g);
+
+  // Nếu không có kết quả trả về, trả về 0
+  return matches ? matches.length : 0;
+}
+
+// Test với dữ liệu "United States"
+const inputString = "United States";
+const result = countVowels(inputString);
+
+// In kết quả
+console.log(result); // Output: 5
