@@ -1,0 +1,175 @@
+//b1
+
+// Tính diện tích hình chữ nhật
+//if-else
+function areaOfRectangle(a, b){
+    if(a > 0 && b > 0){
+        return a * b;
+    }else{
+        return "Invalid value";
+    }
+}
+console.log(areaOfRectangle(2, 3));
+//switch-case
+function areaOfRectangle(a, b){
+    switch(true){
+        case a > 0 && b > 0:
+            return a * b;
+        default:
+            return "Invalid value";
+    }
+}
+//handle exception
+function areaOfRectangle(a, b){
+    try{
+        if(a > 0 && b > 0){
+            return a * b;
+        }else{
+            throw new Error("Invalid value");
+        }
+    }catch(e){
+        return e.message;
+    }
+}
+
+//Tính diện tích tam giác
+//if-else
+function areaOfTriangle(a, h){
+    if(a > 0 && h > 0){
+        return a * h / 2;
+    }else{
+        return "Invalid value";
+    }
+}
+//switch-case
+function areaOfTriangle(a, h){
+    switch(true){
+        case a > 0 && h > 0:
+            return a * h / 2;
+        default:
+            return "Invalid value";
+    }
+}
+//handle exception
+function areaOfTriangle(a, h){
+    try{
+        if(a > 0 && h > 0){
+            return a * h / 2;
+        }else{
+            throw new Error("Invalid value");
+        }
+    }catch(e){
+        return e.message;
+    }
+}
+
+// Tính diện tích hình tròn
+//if-else
+function areaOfCircle(r){
+    if(r > 0){
+        return Math.PI * r * r;
+    }else{
+        return "Invalid value";
+    }
+}
+//switch-case
+function areaOfCircle(r){
+    switch(true){
+        case r > 0:
+            return Math.PI * r * r;
+        default:
+            return "Invalid value";
+    }
+}
+//handle exception
+function areaOfCircle(r){
+    try{
+        if(r > 0){
+            return Math.PI * r * r;
+        }else{
+            throw new Error("Invalid value");
+        }
+    }catch(e){
+        return e.message;
+    }
+}
+
+//b2
+// Viết chương trình giải phương trình bậc 2 (ax2 + bx + c = 0)
+//if-else
+function quadraticEquation(a, b, c){
+    if(a == 0){
+        if(b == 0){
+            if(c == 0){
+                return "Phương trình vô số nghiệm";
+            }else{
+                return "Phương trình vô nghiệm";
+            }
+        }else{
+            return "Phương trình có nghiệm duy nhất: " + (-c / b);
+        }
+    }else{
+        let delta = b * b - 4 * a * c;
+        if(delta < 0){
+            return "Phương trình vô nghiệm";
+        }else if(delta == 0){
+            return "Phương trình có nghiệm kép: " + (-b / (2 * a));
+        }else{
+            return "Phương trình có 2 nghiệm phân biệt: " + ((-b + Math.sqrt(delta)) / (2 * a)) + " và " + ((-b - Math.sqrt(delta)) / (2 * a));
+        }
+    }
+}
+//switch-case
+function quadraticEquation(a, b, c){
+    switch(true){
+        case a == 0:
+            switch(true){
+                case b == 0:
+                    switch(true){
+                        case c == 0:
+                            return "Phương trình vô số nghiệm";
+                        default:
+                            return "Phương trình vô nghiệm";
+                    }
+                default:
+                    return "Phương trình có nghiệm duy nhất: " + (-c / b);
+            }
+        default:
+            let delta = b * b - 4 * a * c;
+            switch(true){
+                case delta < 0:
+                    return "Phương trình vô nghiệm";
+                case delta == 0:
+                    return "Phương trình có nghiệm kép: " + (-b / (2 * a));
+                default:
+                    return "Phương trình có 2 nghiệm phân biệt: " + ((-b + Math.sqrt(delta)) / (2 * a)) + " và " + ((-b - Math.sqrt(delta)) / (2 * a));
+            }
+    }
+}
+//handle exception
+function quadraticEquation(a, b, c){
+    try{
+        if(a == 0){
+            if(b == 0){
+                if(c == 0){
+                    return "Phương trình vô số nghiệm";
+                }else{
+                    return "Phương trình vô nghiệm";
+                }
+            }else{
+                return "Phương trình có nghiệm duy nhất: " + (-c / b);
+            }
+        }else{
+            let delta = b * b - 4 * a * c;
+            if(delta < 0){
+                return "Phương trình vô nghiệm";
+            }else if(delta == 0){
+                return "Phương trình có nghiệm kép: " + (-b / (2 * a));
+            }else{
+                return "Phương trình có 2 nghiệm phân biệt: " + ((-b + Math.sqrt(delta)) / (2 * a)) + " và " + ((-b - Math.sqrt(delta)) / (2 * a));
+            }
+        }
+    }catch(e){
+        return e.message;
+    }
+}
